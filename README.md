@@ -5,6 +5,8 @@ This is a sample plugin for Obsidian (https://obsidian.md).
 This project uses TypeScript to provide type checking and documentation.
 The repo depends on the latest plugin API (obsidian.d.ts) in TypeScript Definition format, which contains TSDoc comments describing what it does.
 
+The build uses Vite 8 in library mode to bundle the plugin into `main.js`.
+
 This sample plugin demonstrates some of the basic functionality the plugin API can do.
 - Adds a ribbon icon, which shows a Notice when clicked.
 - Adds a command "Open modal (simple)" which opens a Modal.
@@ -19,7 +21,7 @@ Quick starting guide for new plugin devs:
 - Check if [someone already developed a plugin for what you want](https://obsidian.md/plugins)! There might be an existing plugin similar enough that you can partner up with.
 - Make a copy of this repo as a template with the "Use this template" button (login to GitHub if you don't see it).
 - Clone your repo to a local development folder. For convenience, you can place this folder in your `.obsidian/plugins/your-plugin-name` folder.
-- Install NodeJS, then run `npm i` in the command line under your repo folder.
+- Install Node.js 20.19+ or 22.12+, then run `npm install` in the command line under your repo folder.
 - Run `npm run dev` to compile your plugin from `main.ts` to `main.js`.
 - Make changes to `main.ts` (or create new `.ts` files). Those changes should be automatically compiled into `main.js`.
 - Reload Obsidian to load the new version of your plugin.
@@ -47,19 +49,13 @@ Quick starting guide for new plugin devs:
 ## How to use
 
 - Clone this repo.
-- Make sure your NodeJS is at least v16 (`node --version`).
-- `npm i` or `yarn` to install dependencies.
+- Make sure your Node.js version is `20.19.0` or newer, or `22.12.0` or newer (`node --version`).
+- `npm install` to install dependencies.
 - `npm run dev` to start compilation in watch mode.
 
 ## Manually installing the plugin
 
 - Copy over `main.js`, `styles.css`, `manifest.json` to your vault `VaultFolder/.obsidian/plugins/your-plugin-id/`.
-
-## Improve code quality with eslint
-- [ESLint](https://eslint.org/) is a tool that analyzes your code to quickly find problems. You can run ESLint against your plugin to find common bugs and ways to improve your code. 
-- This project already has eslint preconfigured, you can invoke a check by running`npm run lint`
-- Together with a custom eslint [plugin](https://github.com/obsidianmd/eslint-plugin) for Obsidan specific code guidelines.
-- A GitHub action is preconfigured to automatically lint every commit on all branches.
 
 ## Funding URL
 
