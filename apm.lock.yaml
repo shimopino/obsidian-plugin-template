@@ -1,0 +1,34 @@
+lockfile_version: '1'
+generated_at: '2026-05-02T16:42:12.028742+00:00'
+apm_version: 0.11.0
+dependencies:
+- repo_url: gapmiss/obsidian-plugin-skill
+  host: github.com
+  resolved_commit: 76eddac654fc40009e22c4f53380b5725125e67d
+  virtual_path: .agents/skills/obsidian
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/obsidian
+  - .claude/skills/obsidian
+  content_hash: sha256:fe222026bef05ddce310d6d75940de94135e23a0a580b5cb021b55ea35a4bd56
+- repo_url: kepano/obsidian-skills
+  host: github.com
+  resolved_commit: fa1e131a014576ff8f8919f191a7ca8d8fded39b
+  virtual_path: skills/obsidian-cli
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/obsidian-cli
+  - .claude/skills/obsidian-cli
+  content_hash: sha256:f46ae626875f7e47c410c2ee93896c4526024ebe127719e8fb430261b5677edc
+- repo_url: kepano/obsidian-skills
+  host: github.com
+  resolved_commit: fa1e131a014576ff8f8919f191a7ca8d8fded39b
+  virtual_path: skills/obsidian-markdown
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/obsidian-markdown
+  - .claude/skills/obsidian-markdown
+  content_hash: sha256:610283f884f8af83ca1c4fc0864da4d37db453456c98ef0dd5adcb91603488ce

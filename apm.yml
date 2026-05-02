@@ -1,0 +1,15 @@
+name: obsidian-plugin-template
+version: 1.0.0
+
+targets:
+  - codex
+  - claude
+
+dependencies:
+  apm:
+    # Obsidian 公式：CLI・プラグイン開発ワークフロー
+    - kepano/obsidian-skills/skills/obsidian-cli
+    # Obsidian 公式：Markdown 記法（ドキュメント執筆時に有用）
+    - kepano/obsidian-skills/skills/obsidian-markdown
+    # コミュニティ：プラグイン開発 36ルール・提出ガイドライン
+    - gapmiss/obsidian-plugin-skill/.agents/skills/obsidian
