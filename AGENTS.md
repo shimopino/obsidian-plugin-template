@@ -9,6 +9,16 @@
 ## Environment & tooling
 
 - Node.js: use `20.19+` or `22.12+` because Vite 8 requires one of those ranges.
+- Distinguish between the **development Node.js version** and the **runtime Node.js version inside Obsidian/Electron**:
+    - For local development tooling (`npm install`, `npm run build`, `npm run dev`), use `20.19+` or `22.12+` as required by Vite 8.
+    - For plugin runtime compatibility, only rely on Node.js features that are available in the version bundled with the minimum supported Obsidian installer.
+    - As of Obsidian Desktop `1.12.7` on `2026-03-23`, the installer uses Electron `39.8.3`, which bundles Node.js `22.22.1`. Treat Node `22.x` as the safe upper bound for desktop plugin runtime APIs unless you intentionally raise your minimum installer/app requirements.
+    - Do not assume that using a newer local Node.js version means newer Node.js runtime APIs are safe to use in the plugin.
+    - If you need newer Electron or Node.js runtime capabilities, raise `minAppVersion` appropriately and document the requirement.
+- Keep `@types/node` aligned with the Node.js runtime you intend to support in Obsidian:
+    - Prefer `@types/node` `22.x` for current Obsidian Desktop compatibility.
+    - Avoid jumping to newer major versions such as `24.x` or `25.x` unless you have verified that the corresponding runtime APIs are actually available in the Obsidian/Electron versions you support.
+    - After changing the Node.js type version, verify compatibility with `npm run build` and, if needed, `npx tsc --noEmit --skipLibCheck false`.
 - **Package manager: npm** (required for this sample - `package.json` defines npm scripts and dependencies).
 - **Bundler: Vite 8** (required for this sample - `vite.config.ts` and build scripts depend on it). Alternative bundlers are acceptable for other projects if they bundle all external dependencies into `main.js`.
 - Types: `obsidian` type definitions.
