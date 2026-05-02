@@ -12,13 +12,7 @@
 		"skipLibCheck": true,
 		"useUnknownInCatchVariables": true,
 		"verbatimModuleSyntax": true,
-		"lib": [
-			"DOM",
-			"ES2022"
-		]
+		"lib": ["DOM", "ES2022"]
 	},
-	"include": [
-		"src/**/*.ts",
-		"vite.config.ts"
-	]
+	"include": ["src/**/*.ts", "vite.config.ts"]
 }
