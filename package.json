@@ -16,7 +16,7 @@
 		"version": "node version-bump.mjs && git add manifest.json versions.json"
 	},
 	"dependencies": {
-		"obsidian": "1.12.3"
+		"obsidian": "1.13.0"
 	},
 	"devDependencies": {
 		"@types/node": "^22.19.17",
